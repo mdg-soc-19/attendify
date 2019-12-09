@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965298875971",
+    "firebase_url": "https://attendify-d8534.firebaseio.com",
+    "project_id": "attendify-d8534",
+    "storage_bucket": "attendify-d8534.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965298875971:android:897c73cf3e56b3b0272ef6",
+        "android_client_info": {
+          "package_name": "com.SOC.attendify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965298875971-161r8s672fskud65hae189f7q4qfegr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu6cfFEeAeCoZxipNOTg0NA9ZSBco70lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965298875971-161r8s672fskud65hae189f7q4qfegr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

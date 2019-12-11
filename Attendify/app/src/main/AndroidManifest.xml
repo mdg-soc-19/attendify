@@ -18,6 +18,11 @@
         </activity>
         <activity android:name=".UserActivity"></activity>
         <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".Stats_activity"></activity>
+        <activity android:name=".preplanning_activity"></activity>
+        <activity android:name=".Notification_activity"></activity>
+        <activity android:name=".Aboutus_activity"></activity>
+        <activity android:name=".Rescheduled_activity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

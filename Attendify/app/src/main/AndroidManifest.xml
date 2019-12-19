@@ -25,6 +25,7 @@
         <activity android:name=".Rescheduled_activity"></activity>
         <activity android:name=".Subjects"></activity>
         <activity android:name=".Stats_1_Activity"></activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Stats_activity extends AppCompatActivity {
+ int a;
     DatePicker picker;
     Button displayDate,go;
     TextView textview1;

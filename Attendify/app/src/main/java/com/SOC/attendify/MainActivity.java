@@ -18,17 +18,23 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
+    private DatabaseReference mDatabase;
     public EditText emailId, passwd;
     Button btnSignUp;
     TextView signIn;
     FirebaseAuth firebaseAuth;
-
+    private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        mDatabaseReference.child("A").setValue(emailId);
+
         firebaseAuth = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.ETemail);
         passwd = findViewById(R.id.ETpassword);
@@ -56,8 +62,27 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this.getApplicationContext(),
                                         "SignUp unsuccessful: " + task.getException().getMessage(),
                                         Toast.LENGTH_SHORT).show();
+
                             } else {
                                 startActivity(new Intent(MainActivity.this, UserActivity.class));
+                                startActivity(new Intent(MainActivity.this, UserActivity.class));
+                                String currentuser=FirebaseAuth.getInstance().getCurrentUser().getUid();
+                                mDatabaseReference=FirebaseDatabase.getInstance().getReference().child(currentuser);
+                                mDatabaseReference.child("Present1").setValue(0);
+                                mDatabaseReference.child("total1").setValue(0);
+
+                                mDatabaseReference.child("Present2").setValue(0);
+                                mDatabaseReference.child("total2").setValue(0);
+
+                                mDatabaseReference.child("Present3").setValue(0);
+                                mDatabaseReference.child("total3").setValue(0);
+
+                                mDatabaseReference.child("Present4").setValue(0);
+                                mDatabaseReference.child("total4").setValue(0);
+
+                                mDatabaseReference.child("Present5").setValue(0);
+                                mDatabaseReference.child("total5").setValue(0);
+
                             }
                         }
                     });

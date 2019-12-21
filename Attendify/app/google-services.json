@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "965298875971-sv4fseg6u8bio50rukm7sfpa26akcg8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SOC.attendify",
+            "certificate_hash": "df8826872e97b51dc9ea87a4c364c63a38c56f89"
+          }
+        },
+        {
           "client_id": "965298875971-161r8s672fskud65hae189f7q4qfegr0.apps.googleusercontent.com",
           "client_type": 3
         }

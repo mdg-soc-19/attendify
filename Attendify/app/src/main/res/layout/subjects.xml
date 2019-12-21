@@ -9,32 +9,95 @@
     tools:context="com.SOC.attendify.Subjects" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/example_edittext" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="130dp"
-        android:text="@string/show_the_text" />
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="20dp"
+        android:text="ADD YOUR SUBJECTS" />
 
     <EditText
         android:id="@+id/edittext"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
         android:layout_alignLeft="@+id/button"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="61dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="95dp"
         android:ems="10"
-        android:text="@string/enter_text" android:inputType="text" />
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext8"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="95dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext9"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext10"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext11"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="365dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext12"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="365dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <EditText
+        android:id="@+id/edittext13"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ADD SUBJECT" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="SAVE AND GO" />
 
 </RelativeLayout>

@@ -32,5 +32,6 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.0.2'
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+
 }
 apply plugin: 'com.google.gms.google-services'

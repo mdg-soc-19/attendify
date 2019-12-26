@@ -1,7 +1,9 @@
 package com.SOC.attendify;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +44,7 @@ public class Stats_activity extends AppCompatActivity {
                 Intent I = new Intent(Stats_activity.this, Stats_1_Activity.class);
                 startActivity(I);
 
+
             }
         });
 
@@ -51,6 +54,7 @@ public class Stats_activity extends AppCompatActivity {
         builder.append((picker.getMonth() + 1)+"/");//month is 0 based
         builder.append(picker.getDayOfMonth()+"/");
         builder.append(picker.getYear());
+
         return builder.toString();
     }
 

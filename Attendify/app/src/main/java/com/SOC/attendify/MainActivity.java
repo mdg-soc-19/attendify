@@ -25,16 +25,17 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     public EditText emailId, passwd;
     Button btnSignUp;
-    TextView signIn;
+    TextView signIn,username;
+    String Name;
     FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
-        mDatabaseReference.child("A").setValue(emailId);
 
+        username=(EditText) findViewById(R.id.username);
+        Name=username.getText().toString();
         firebaseAuth = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.ETemail);
         passwd = findViewById(R.id.ETpassword);
@@ -82,6 +83,22 @@ public class MainActivity extends AppCompatActivity {
 
                                 mDatabaseReference.child("Present5").setValue(0);
                                 mDatabaseReference.child("total5").setValue(0);
+
+                                mDatabaseReference.child("Present6").setValue(0);
+                                mDatabaseReference.child("total6").setValue(0);
+
+                                mDatabaseReference.child("Present7d").setValue(0);
+                                mDatabaseReference.child("total7").setValue(0);
+
+                            mDatabaseReference.child("Subject 1").setValue("Subject1");
+                                mDatabaseReference.child("Subject 2").setValue("Subject2");
+                                mDatabaseReference.child("Subject 3").setValue("Subject3");
+                                mDatabaseReference.child("Subject 4").setValue("Subject4");
+                                mDatabaseReference.child("Subject 5").setValue("Subject5");
+                                mDatabaseReference.child("Subject 6").setValue("Subject6");
+                                mDatabaseReference.child("Subject 7").setValue("Subject7");
+                                Name=username.getText().toString();
+                                mDatabaseReference.child("Name").setValue(Name);
 
                             }
                         }

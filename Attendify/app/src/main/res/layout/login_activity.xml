@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="#0C0B0B"
+        android:textColorHint="#0C0B0B" />
 
     <EditText
         android:id="@+id/loginpaswd"
@@ -21,13 +23,16 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:hint="Password"
-        android:inputType="numberPassword"/>
+        android:inputType="numberPassword"
+        android:textColor="#0C0B0B"
+        android:textColorHint="#0C0B0B" />
 
     <Button
         android:id="@+id/btnLogIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_margin="15dp"
+        android:background="@drawable/button_custom"
         android:text="Login In"
         android:textSize="25dp" />
 
@@ -37,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="New User? Register Here"
+        android:textColor="#0C0B0B"
         android:textSize="20dp" />
 
 </LinearLayout>

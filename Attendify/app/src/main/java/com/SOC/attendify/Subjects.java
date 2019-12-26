@@ -26,6 +26,7 @@ public class Subjects extends AppCompatActivity {
     private TextView s1,s2,s3,s4,s5,s6,s7;
    Button btn,btn2,S1,S2,S3,S4,S5,S6,S7;
    private DatabaseReference mDatabase;
+
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
 

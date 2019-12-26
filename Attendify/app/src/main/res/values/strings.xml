@@ -3,4 +3,9 @@
     <string name="example_edittext">Example showing EditText</string>
     <string name="show_the_text">Show the Text</string>
     <string name="enter_text">text changes</string>/>
+    <string-array name="navigation_drawer_items_array">
+        <item>Connect</item>
+        <item>Fixtures</item>
+        <item>Table</item>
+    </string-array>
 </resources>

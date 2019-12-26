@@ -1,87 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:background="#FFA259"
-    android:orientation="vertical"
-    tools:context="com.SOC.attendify.UserActivity">
+    android:background="@drawable/backgroundblue">
 
-    <TextView
-        android:id="@+id/Welcome"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/aclonica"
-        android:gravity="center"
-        android:text="Welcome user!"
-        android:textColor="#FFF3AF"
-        android:textSize="40dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="500dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="Logout"
-        android:textColor="#FFF3AF" />
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="100dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="ATTENDANCE STATS"
-        android:textColor="#FFF3AF" />
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-        style="border-radius:5px solid red"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="100dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="Preplanning"
-        android:textColor="#FFF3AF" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="300dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="Notifications"
-        android:textColor="#FFF3AF" />
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:text="Welcome user!"
+            android:textColor="#EB6E80"
+            android:textSize="40dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="300dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="Rescheduled classes"
-        android:textColor="#FFF3AF" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="500dp"
-        android:background="#FE6845"
-        android:fontFamily="@font/carter_one"
-        android:text="About us"
-        android:textColor="#FFF3AF" />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="187dp"
+            android:layout_marginLeft="50dp"
+            tools:srcCompat="@drawable/attendifyy" />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnLogOut"
+                android:layout_width="410dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="320dp"
+                android:background="@drawable/button_custom_2"
+                android:fontFamily="@font/carter_one"
+                android:text="Logout"
+                android:textColor="#FFF3AF" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/button2"
+            style="border-radius:5px solid red"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="100dp"
+            android:background="#FE6845"
+            android:fontFamily="@font/carter_one"
+            android:text="Preplanning"
+            android:textColor="#FFF3AF" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="100dp"
+            android:background="#FE6845"
+            android:fontFamily="@font/carter_one"
+            android:text="ATTENDANCE STATS"
+            android:textColor="#FFF3AF" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="300dp"
+            android:background="#FE6845"
+            android:fontFamily="@font/carter_one"
+            android:text="Notifications"
+            android:textColor="#FFF3AF" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="300dp"
+            android:background="#FE6845"
+            android:fontFamily="@font/carter_one"
+            android:text="Rescheduled classes"
+            android:textColor="#FFF3AF" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="500dp"
+            android:background="#FE6845"
+            android:fontFamily="@font/carter_one"
+            android:text="About us"
+            android:textColor="#FFF3AF" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

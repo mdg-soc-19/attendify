@@ -23,8 +23,15 @@
         <activity android:name=".Notification_activity"></activity>
         <activity android:name=".Aboutus_activity"></activity>
         <activity android:name=".Rescheduled_activity"></activity>
-        <activity android:name=".Subjects"></activity>
         <activity android:name=".Stats_1_Activity"></activity>
+        <activity android:name=".Subjects"></activity>
+        <activity android:name=".S1"></activity>
+        <activity android:name=".S2"></activity>
+        <activity android:name=".S3"></activity>
+        <activity android:name=".S4"></activity>
+        <activity android:name=".S5"></activity>
+        <activity android:name=".S6"></activity>
+        <activity android:name=".S7"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

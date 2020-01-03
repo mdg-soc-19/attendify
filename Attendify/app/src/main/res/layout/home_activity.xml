@@ -7,13 +7,14 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundblue">
+    android:background="#161B21">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:id="@+id/container_toolbar"
@@ -32,19 +33,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/adamina"
             android:gravity="center"
-            android:text="Welcome user!"
-            android:textColor="#EB6E80"
-            android:textSize="40dp" />
+            android:text="Welcome                                                       user!"
+            android:textColor="#F4A950"
+            android:textSize="40sp" />
 
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="187dp"
-            android:layout_marginLeft="50dp"
-            tools:srcCompat="@drawable/attendifyy" />
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            app:srcCompat="@drawable/screenshot" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="0dp"
+            android:background="#F4A950"
+            android:contentDescription="@string/submit"
+            android:src="@drawable/add"
+            app:maxImageSize="50dp" />
 
         <FrameLayout
             android:id="@+id/content_frame"
@@ -53,15 +67,33 @@
 
             <Button
                 android:id="@+id/btnLogOut"
-                android:layout_width="410dp"
+                android:layout_width="420dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="320dp"
-                android:background="@drawable/button_custom_2"
-                android:fontFamily="@font/carter_one"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="#F4A950"
+                android:fontFamily="sans-serif"
                 android:text="Logout"
-                android:textColor="#FFF3AF" />
+                android:textColor="#FFFFFF"
+                tools:textColor="#FFFFFF" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="0dp"
+                app:itemBackground="@color/colorPrimary"
+                app:itemIconTint="@android:color/white"
+                app:itemTextColor="@android:color/white"
+                app:menu="@menu/bottom_nav_menu" />
+
+
+
         </FrameLayout>
+
 
         <Button
             android:id="@+id/button2"
@@ -117,6 +149,7 @@
             android:text="About us"
             android:textColor="#FFF3AF" />
 
+
     </LinearLayout>
 
     <ListView
@@ -128,6 +161,8 @@
         android:choiceMode="singleChoice"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
+
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

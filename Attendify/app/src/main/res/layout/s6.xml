@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8000000">
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/aclonica"
-        android:text=" Percentage    Attendance"
+        android:text=" Percentage  Attendance"
         android:textColor=" #39ff14"
         android:textSize="25dp" />
 
@@ -38,21 +39,21 @@
 
     <Button
         android:id="@+id/button39"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
         android:text="Attend" />
 
     <Button
         android:id="@+id/button40"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
         android:text="Button" />
 
     <Button
         android:id="@+id/button41"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
         android:text="Save" />
@@ -63,7 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="casual"
-        android:text="Total Classes :" />
+        android:text="Total Classes :"
+        android:textColor="#15F4EE" />
 
     <TextView
         android:id="@+id/textView47"
@@ -71,7 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="casual"
-        android:text="Present :" />
+        android:text="Present :"
+        android:textColor=" #39ff14" />
 
     <TextView
         android:id="@+id/textView48"
@@ -79,12 +82,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="casual"
-        android:text="Absent :" />
+        android:text="Absent :"
+        android:textColor="#ff073a" />
 
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart10"
+    <TextView
+        android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        android:text="Attend"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp" />
+
 </LinearLayout>

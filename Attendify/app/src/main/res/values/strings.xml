@@ -2,7 +2,18 @@
     <string name="app_name">Attendify</string>
     <string name="example_edittext">Example showing EditText</string>
     <string name="show_the_text">Show the Text</string>
-    <string name="enter_text">text changes</string>/>
+    <string name="enter_text">text changes</string>
+    <string name="lbl_forgot_password">forgot password</string>
+    <string name="forgot_password_msg">message</string>
+    <string name="btn_reset_password">reset password</string>
+    <string name="btn_back">back</string>
+    <string name="hint_email">Email hint</string>
+    <string name="submit">Submit</string>
+    <string name="app__name">Android CalendarView Example</string>
+    <string name="spinner_title"></string>
+    <string name="action_settings"></string>
+
+    />
     <string-array name="navigation_drawer_items_array">
         <item>Connect</item>
         <item>Fixtures</item>

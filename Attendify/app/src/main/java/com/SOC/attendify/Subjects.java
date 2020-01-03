@@ -97,8 +97,7 @@ mDatabase.child("a").setValue(a);
                 s6.setText(str6);
                 String     str7 =dataSnapshot.child("Subject 7").getValue().toString();
                 s7.setText(str7);
-            String str8=dataSnapshot.child("a").getValue().toString();
-            a=Integer.parseInt(str8);
+
             }
 
 
@@ -107,15 +106,8 @@ mDatabase.child("a").setValue(a);
 
             }
         });
-        if (a==0)
-        { mDatabase.child("Subject 1").setValue("Add the subject 1");
-            mDatabase.child("Subject 2").setValue("Add the subject 2");
-            mDatabase.child("Subject 3").setValue("Add the subject 3");
-            mDatabase.child("Subject 4").setValue("Add the subject 4");
-            mDatabase.child("Subject 5").setValue("Add the subject 5");
-            mDatabase.child("Subject 6").setValue("Add the subject 6");
-            mDatabase.child("Subject 7").setValue("Add the subject 7");
-            mDatabase.child("a").setValue(0);}
+
+
 
 
     }

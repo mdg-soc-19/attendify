@@ -5,281 +5,98 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fceed1"
+    android:background="#161B21"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/acme"
+        android:text="SUBJECTS"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView56"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bevan"
-        android:text="Psychology"
-        android:textColor="#FF9800" />
-
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        android:text="Subject 1"
+        android:textColor="#15F4EE"
+        android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="30dp"
+        android:id="@+id/textView57"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#2196F3" />
-
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart"
-        android:layout_width="100dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-70dp" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-10dp"
-        android:background="#00FF00"
-        android:text="Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="-30dp"
-        android:background="#F44336"
-        android:text="Not Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-30dp"
-        android:background="#2196F3"
-        android:text="No Class" />
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        android:textColor="#15F4EE"
+        android:text="TextView"
+        android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-
+        android:id="@+id/textView58"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/bevan"
-        android:text="English"
-        android:textColor="#FF9800" />
+        android:layout_marginTop="30dp"
+        android:textColor="#15F4EE"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="30dp"
+        android:id="@+id/textView59"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#2196F3" />
-
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart1"
-        android:layout_width="100dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-70dp" />
-
-    <Button
-        android:id="@+id/button22"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:background="#00FF00"
-        android:text="Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button23"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="-30dp"
-        android:background="#F44336"
-        android:text="Not Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-30dp"
-        android:background="#2196F3"
-        android:text="No Class" />
+        android:layout_marginTop="30dp"
+        android:textColor="#15F4EE"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView60"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/bevan"
-        android:text="Mathematics"
-        android:textColor="#FF9800" />
-
+        android:layout_marginTop="30dp"
+        android:textColor="#15F4EE"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="30dp"
+        android:id="@+id/textView61"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#2196F3" />
+        android:layout_marginTop="30dp"
+        android:textColor="#15F4EE"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textSize="30dp" />
 
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart2"
-        android:layout_width="100dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-70dp" />
-
-    <Button
-        android:id="@+id/button25"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-10dp"
-        android:background="#00FF00"
-        android:text="Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button26"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="-30dp"
-        android:background="#F44336"
-        android:text="Not Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button27"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-30dp"
-        android:background="#2196F3"
-        android:text="No Class" />
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#15F4EE"
+        android:fontFamily="casual"
+        android:text="TextView"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/bevan"
-        android:text="EVS"
-        android:textColor="#FF9800" />
-
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#2196F3" />
-
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart3"
-        android:layout_width="100dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-70dp" />
-
-    <Button
-        android:id="@+id/button28"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-10dp"
-        android:background="#00FF00"
-        android:text="Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button29"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="-30dp"
-        android:background="#F44336"
-        android:text="Not Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button30"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-30dp"
-        android:background="#2196F3"
-        android:text="No Class" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/bevan"
-        android:text="Physics"
-        android:textColor="#FF9800" />
-
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#2196F3" />
-
-    <lecho.lib.hellocharts.view.PieChartView
-        android:id="@+id/chart4"
-        android:layout_width="100dp"
-        android:layout_height="103dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="-70dp" />
-
-    <Button
-        android:id="@+id/button31"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="-10dp"
-        android:background="#00FF00"
-        android:text="Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button32"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="-30dp"
-        android:background="#F44336"
-        android:text="Not Attend"
-        android:textSize="10sp" />
-
-    <Button
-        android:id="@+id/button33"
-        android:layout_width="95dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-30dp"
-        android:background="#2196F3"
-        android:text="No Class" />
-
-    <Button
-        android:id="@+id/button34"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="save" />
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7CD8D5"
+    android:background="#161B21"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="20dp"
-        android:background="#2196F3"
+        android:background="#F4A950"
         android:fontFamily="@font/aclonica"
         android:padding="10dp"
         android:text="ADD YOUR SUBJECTS"
@@ -28,12 +28,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="95dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext8"
@@ -42,12 +41,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="170dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext9"
@@ -56,12 +54,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="245dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext10"
@@ -70,12 +67,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="320dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext11"
@@ -84,12 +80,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="395dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext12"
@@ -98,12 +93,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="470dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/edittext13"
@@ -112,12 +106,11 @@
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="545dp"
-        android:background="#F9BE02"
         android:ems="10"
-        android:fontFamily="@font/abhaya_libre"
+        android:fontFamily="@font/eagle_lake"
         android:inputType="text"
         android:text="ADD SUBJECT"
-        android:textColor="#F53240" />
+        android:textColor="#F4A950" />
 
     <Button
         android:id="@+id/button7"

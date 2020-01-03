@@ -1,5 +1,6 @@
 package com.SOC.attendify;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +30,7 @@ public class S1 extends AppCompatActivity {
     public Button btn1,btn2,save;
 
 
-private TextView t;
+private TextView t,t1,t2,t3,t4,t5;
     int c=a;
     int d=b;
     private DatabaseReference mDatabaseReference;
@@ -37,43 +39,40 @@ private TextView t;
 
     PieChartView pieChartView;
 
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.s1);
+
 mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
     btn1 = (Button) findViewById(R.id.button8);
-    btn1.setOnClickListener(new View.OnClickListener() {
+    t1=(TextView) findViewById(R.id.textView16);
+    t2=(TextView) findViewById(R.id.textView17);
+            t3=(TextView) findViewById(R.id.textView18);
+        t4=(TextView) findViewById(R.id.textView63);
+        t5=(TextView) findViewById(R.id.textView15);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
 
                                     TextView tv = (TextView) findViewById(R.id.textView15);
-                                    if (b == d) {
+                                    if (d == b) {
                                         b++;
                                         a++;
                                         tv.setText(a * 100 / b + "%");
                                         btn1.setEnabled(false);
                                         btn2.setEnabled(true);
+                                    btn1.setTextColor(Color.parseColor("#39ff14"));
+                                        btn2.setTextColor(Color.parseColor("#FFFFFF"));
+
                                     } else {
                                         a++;
                                         tv.setText(a * 100 / b + "%");
                                         btn1.setEnabled(false);
                                         btn2.setEnabled(true);
+                                        btn1.setTextColor(Color.parseColor("#39ff14"));
+                                        btn1.setTextColor(Color.parseColor("#FFFFFF"));
                                     }
-                                    List pieData = new ArrayList<>();
-                                    if (b == 0) {
-                                        pieData.add(new SliceValue(0, Color.GREEN).setLabel("Attend"));
-                                        pieData.add(new SliceValue(0, Color.RED).setLabel("Absent"));
-                                    } else {
-                                        pieData.add(new SliceValue(a / b, Color.GREEN));
-                                        pieData.add(new SliceValue(1 - a / b, Color.RED));
-
-                                    }
-                                    pieChartView = findViewById(R.id.chart5);
-
-                                    PieChartData pieChartData = new PieChartData(pieData);
-                                    pieChartData.setHasLabels(true).setValueLabelTextSize(0);
-                                    pieChartData.setHasCenterCircle(true);
-                                    pieChartView.setPieChartData(pieChartData);
 
                                 }});
     btn2 = (Button) findViewById(R.id.button9);
@@ -82,35 +81,23 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
         public void onClick(View view) {
             TextView tv = (TextView) findViewById(R.id.textView15);
 
-            if (a != c) {
+            if (c!=a) {
                 a -= 1;
                 tv.setText(a * 100 / b + "%");
                 btn2.setEnabled(false);
                 btn1.setEnabled(true);
+                btn2.setTextColor(Color.parseColor("#ff073a"));
+                btn1.setTextColor(Color.parseColor("#FFFFFF"));
             } else {
                 b++;
                 tv.setText(a * 100 / b + "%");
                 btn2.setEnabled(false);
                 btn1.setEnabled(true);
-            }
-            List pieData = new ArrayList<>();
-            if (b==0)
-            {
-                pieData.add(new SliceValue(0, Color.GREEN));
-                pieData.add(new SliceValue(0, Color.RED));}
-            else{
-                pieData.add(new SliceValue(a/b,Color.GREEN));
-                pieData.add(new SliceValue(1-a/b, Color.RED));
-
+                btn2.setTextColor(Color.parseColor("#ff073a"));
+                btn1.setTextColor(Color.parseColor("#FFFFFF"));
             }
 
-            pieChartView = findViewById(R.id.chart5);
 
-
-            PieChartData pieChartData = new PieChartData(pieData);
-            pieChartData.setHasLabels(true);
-            pieChartData.setHasCenterCircle(true);
-            pieChartView.setPieChartData(pieChartData);
 
 }});
 save=(Button) findViewById(R.id.button10) ;
@@ -124,10 +111,47 @@ save=(Button) findViewById(R.id.button10) ;
                                         mDatabase.child("total1").setValue(b);
 
 
+t1.setText("Total Classes :" + b);
+t2.setText("Attended :" + a);
+t3.setText("Absent :" + (b-a));
+                                        if (b!=0)
+                                        {
+                                            if ((a * 100 / b) < 75) {
+                                                int count = 0;
 
+                                                while ((a*100/b<75)) {
+                                                    a++;
+                                                    b++;
+                                                    count++;
+
+                                                }
+                                                t4.setText("Attend next " + (count) +" classes to get your attendance to 75%");
+                                                a-=count;
+                                                b-=count;
+                                                count=0;
+                                            }
+                                            else if (( a* 100 / b) >75)
+
+                                            {  int count = 0;
+
+
+                                                while ((a * 100 / b) >75) {
+                                                    b++;
+                                                    count++;
+                                                }
+                                                t4.setText("You can bunk next " + (count-1) + "classes for >75% attendace");
+                                               b-=count;
+                                               count=0;}
+
+                       else if ((a*100/b)==75 )
+                                                {t4.setText("You cannot bunk any class");
+                                            }
+                                        }
 
                                     }
-                                }
+
+                                    }
+
         );
 
 t=(TextView) findViewById(R.id.textView4);
@@ -136,20 +160,53 @@ t=(TextView) findViewById(R.id.textView4);
             private String converta, convertb,converta1, convertb1,converta2, convertb2,converta3, convertb3,converta4, convertb4;
 
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-String s;
+                String s;
 
                 converta = dataSnapshot.child("Present1").getValue().toString();
                 convertb = dataSnapshot.child("total1").getValue().toString();
-                s=  dataSnapshot.child("Subject 1").getValue().toString();
- t.setText(s);
+                s = dataSnapshot.child("Subject 1").getValue().toString();
+                t.setText(s);
 
                 a = Integer.parseInt(converta);
                 b = Integer.parseInt(convertb);
-                c=a;
-                d=b;
+                c = a;
+                d = b;
 
 
+                t1.setText("Total Classes :" + b);
+                t2.setText("Present :" + a);
+                t3.setText("Absent :" + (b - a));
+                if (b!=0)
+                {
 
+                    if ((a * 100 / b) < 75) {
+                    int count = 0;
+
+                    while ((a*100/b<75)) {
+                        a++;
+                        b++;
+                        count++;
+
+                    }
+                    a-=count;
+                    b-=count;
+                    t4.setText("Attend next " + (count) +" classes to get your attendance to 75%");
+                } else if (( a* 100 / b )> 75)
+                {
+                    int count = 0;
+
+                    while ((a * 100 / b) >75) {
+                        b++;
+                        count++;
+                    }
+                    b-=count;
+                    t4.setText("You can bunk next " + (count-1) + "classes for >75% attendace");
+                    count=0;
+                }
+                    else if ((a*100/b)==75 )
+                    {t4.setText("You cannot bunk any class");
+                    }
+                }
 
 
             }

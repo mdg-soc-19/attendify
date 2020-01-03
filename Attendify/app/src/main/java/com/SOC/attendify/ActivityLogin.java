@@ -4,6 +4,7 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ActivityLogin extends AppCompatActivity {
     public EditText loginEmailId, logInpasswd;
     Button btnLogIn;
-    TextView signup;
+    TextView signup,forgot;
     FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
@@ -37,6 +38,7 @@ public class ActivityLogin extends AppCompatActivity {
         logInpasswd = findViewById(R.id.loginpaswd);
         btnLogIn = findViewById(R.id.btnLogIn);
         signup = findViewById(R.id.TVSignIn);
+        forgot=findViewById(R.id.TVforgot);
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -57,6 +59,14 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(I);
             }
         });
+
+forgot.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent I=new Intent(ActivityLogin.this,ResetPasswordActivity.class);
+    startActivity(I);
+    }
+});
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

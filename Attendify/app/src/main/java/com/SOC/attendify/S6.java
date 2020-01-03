@@ -28,7 +28,7 @@ public class S6 extends AppCompatActivity {
     public Button btn1,btn2,save;
 
 
-    private TextView t;
+    private TextView t,t1,t2,t3,t4;;
     int c=a;
     int d=b;
     private DatabaseReference mDatabaseReference;
@@ -41,6 +41,10 @@ public class S6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.s6);
         mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
+        t1=(TextView) findViewById(R.id.textView46);
+        t2=(TextView) findViewById(R.id.textView47);
+        t3=(TextView) findViewById(R.id.textView48);
+        t4=(TextView) findViewById(R.id.textView9);
         btn1 = (Button) findViewById(R.id.button39);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,21 +63,6 @@ public class S6 extends AppCompatActivity {
                     btn1.setEnabled(false);
                     btn2.setEnabled(true);
                 }
-                List pieData = new ArrayList<>();
-                if (b == 0) {
-                    pieData.add(new SliceValue(0, Color.GREEN).setLabel("Attend"));
-                    pieData.add(new SliceValue(0, Color.RED).setLabel("Absent"));
-                } else {
-                    pieData.add(new SliceValue(a / b, Color.GREEN));
-                    pieData.add(new SliceValue(1 - a / b, Color.RED));
-
-                }
-                pieChartView = findViewById(R.id.chart10);
-
-                PieChartData pieChartData = new PieChartData(pieData);
-                pieChartData.setHasLabels(true).setValueLabelTextSize(0);
-                pieChartData.setHasCenterCircle(true);
-                pieChartView.setPieChartData(pieChartData);
 
             }});
         btn2 = (Button) findViewById(R.id.button40);
@@ -93,24 +82,6 @@ public class S6 extends AppCompatActivity {
                     btn2.setEnabled(false);
                     btn1.setEnabled(true);
                 }
-                List pieData = new ArrayList<>();
-                if (b==0)
-                {
-                    pieData.add(new SliceValue(0, Color.GREEN));
-                    pieData.add(new SliceValue(0, Color.RED));}
-                else{
-                    pieData.add(new SliceValue(a/b,Color.GREEN));
-                    pieData.add(new SliceValue(1-a/b, Color.RED));
-
-                }
-
-                pieChartView = findViewById(R.id.chart10);
-
-
-                PieChartData pieChartData = new PieChartData(pieData);
-                pieChartData.setHasLabels(true);
-                pieChartData.setHasCenterCircle(true);
-                pieChartView.setPieChartData(pieChartData);
 
             }});
         save=(Button) findViewById(R.id.button41) ;
@@ -123,6 +94,45 @@ public class S6 extends AppCompatActivity {
                                         mDatabase.child("Present6").setValue(a);
                                         mDatabase.child("total6").setValue(b);
 
+
+
+                                        t1.setText("Total Classes :" + b);
+                                        t2.setText("Attended :" + a);
+                                        t3.setText("Absent :" + (b-a));
+
+                                        if (b!=0)
+                                        {
+                                            if ((a * 100 / b) < 75) {
+                                                int count = 0;
+
+                                                while ((a*100/b<75)) {
+                                                    a++;
+                                                    b++;
+                                                    count++;
+
+                                                }
+                                                t4.setText("Attend next " + (count) +" classes to get your attendance to 75%");
+                                                a-=count;
+                                                b-=count;
+                                                count=0;
+                                            }
+                                            else if (( a* 100 / b) >75)
+
+                                            {  int count = 0;
+
+
+                                                while ((a * 100 / b) >75) {
+                                                    b++;
+                                                    count++;
+                                                }
+                                                t4.setText("You can bunk next " + (count-1) + "classes for >75% attendace");
+                                                b-=count;
+                                                count=0;}
+
+                                            else if ((a*100/b)==75 )
+                                            {t4.setText("You cannot bunk any class");
+                                            }
+                                        }
 
 
 
@@ -149,7 +159,44 @@ public class S6 extends AppCompatActivity {
                 d=b;
 
 
+                t1.setText("Total Classes :" + b);
+                t2.setText("Present :" + a );
+                t3.setText("Absent :" + (b-a));
 
+
+
+
+                if (b!=0)
+                {
+
+                    if ((a * 100 / b) < 75) {
+                        int count = 0;
+
+                        while ((a*100/b<75)) {
+                            a++;
+                            b++;
+                            count++;
+
+                        }
+                        a-=count;
+                        b-=count;
+                        t4.setText("Attend next " + (count) +" classes to get your attendance to 75%");
+                    } else if (( a* 100 / b )> 75)
+                    {
+                        int count = 0;
+
+                        while ((a * 100 / b) >75) {
+                            b++;
+                            count++;
+                        }
+                        b-=count;
+                        t4.setText("You can bunk next " + (count-1) + "classes for >75% attendace");
+                        count=0;
+                    }
+                    else if ((a*100/b)==75 )
+                    {t4.setText("You cannot bunk any class");
+                    }
+                }
 
 
             }

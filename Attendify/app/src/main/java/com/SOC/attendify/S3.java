@@ -1,6 +1,6 @@
 package com.SOC.attendify;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import lecho.lib.hellocharts.model.PieChartData;
-import lecho.lib.hellocharts.model.SliceValue;
 import lecho.lib.hellocharts.view.PieChartView;
 
 public class S3 extends AppCompatActivity {
@@ -94,53 +92,51 @@ public class S3 extends AppCompatActivity {
                                     public void onClick(View view) {
 
 
-
                                         mDatabase.child("Present3").setValue(a);
                                         mDatabase.child("total3").setValue(b);
 
 
-
                                         t1.setText("Total Classes :" + b);
                                         t2.setText("Attended :" + a);
-                                        t3.setText("Absent :" + (b-a));
+                                        t3.setText("Absent :" + (b - a));
 
 
-
-                                        if (b!=0)
-                                        {
+                                        if (b != 0) {
                                             if ((a * 100 / b) < 75) {
                                                 int count = 0;
 
-                                                while ((a*100/b<75)) {
+                                                while ((a * 100 / b < 75)) {
                                                     a++;
                                                     b++;
                                                     count++;
 
                                                 }
-                                                t4.setText("Attend next " + (count) +" classes to get your attendance to 75%");
-                                                a-=count;
-                                                b-=count;
-                                                count=0;
-                                            }
-                                            else if (( a* 100 / b) >75)
-
-                                            {  int count = 0;
+                                                t4.setText("Attend next " + (count) + " classes to get your attendance to 75%");
+                                                a -= count;
+                                                b -= count;
+                                                count = 0;
+                                            } else if ((a * 100 / b) > 75) {
+                                                int count = 0;
 
 
-                                                while ((a * 100 / b) >75) {
+                                                while ((a * 100 / b) > 75) {
                                                     b++;
                                                     count++;
                                                 }
-                                                t4.setText("You can bunk next " + (count-1) + "classes for >75% attendace");
-                                                b-=count;
-                                                count=0;}
-
-                                            else if ((a*100/b)==75 )
-                                            {t4.setText("You cannot bunk any class");
+                                                t4.setText("You can bunk next " + (count - 1) + "classes for >75% attendace");
+                                                b -= count;
+                                                count = 0;
+                                            } else if ((a * 100 / b) == 75) {
+                                                t4.setText("You cannot bunk any class");
                                             }
+
                                         }
-                                    }
-                                }
+
+
+                                    Intent I = new Intent(S3.this, Stats_1_Activity.class);
+                                    startActivity(I);
+                                }   }
+
         );
 
         t=(TextView) findViewById(R.id.textView26);

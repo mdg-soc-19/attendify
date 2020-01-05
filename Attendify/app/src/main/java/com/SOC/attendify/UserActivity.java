@@ -40,7 +40,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 public class UserActivity extends AppCompatActivity {
-    Button btnLogOut,stats,preplanning,notification,aboutus,reschedule,fab;
+    Button btnLogOut,stats,preplanning,notification,aboutus,reschedule,fab,resch;
     FirebaseAuth firebaseAuth;
     private TextView username;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -70,6 +70,14 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         t6=(TextView) findViewById(R.id.edittext12);
         t7=(TextView) findViewById(R.id.edittext13);
 
+        resch=(Button) findViewById(R.id.button21);
+        resch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I=new Intent (UserActivity.this,Rescheduledstudent.class);
+                startActivity(I);
+            }
+        });
 
 
 
@@ -78,44 +86,16 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
-        mDatabaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String s1=dataSnapshot.child("Subject 1").getValue().toString();
-                String s2=dataSnapshot.child("Subject 2").getValue().toString();
-                String s3=dataSnapshot.child("Subject 3").getValue().toString();
-                String s4=dataSnapshot.child("Subject 4").getValue().toString();
-                String s5=dataSnapshot.child("Subject 5").getValue().toString();
-                String s6=dataSnapshot.child("Subject 6").getValue().toString();
-                String s7=dataSnapshot.child("Subject 7").getValue().toString();
 
 
-
-
-
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
 
         setupToolbar();
-        Datamodel[] drawerItem = new Datamodel[10];
-        drawerItem[0] = new Datamodel(R.drawable.connect, "Subjects");
-        drawerItem[1] = new Datamodel(R.drawable.fixtures, "Select Date");
-        drawerItem[2]=new Datamodel(R.drawable.table,"Stats");
-        drawerItem[3] = new Datamodel(R.drawable.table,"s1");
-        drawerItem[4] = new Datamodel(R.drawable.table,"s2");
-        drawerItem[5] = new Datamodel(R.drawable.table,"s3");
-        drawerItem[6] = new Datamodel(R.drawable.table,"s4");
-        drawerItem[7] = new Datamodel(R.drawable.table, "s5");
-        drawerItem[8] = new Datamodel(R.drawable.table, "s6");
-        drawerItem[9] = new Datamodel(R.drawable.table,"s7");
+        Datamodel[] drawerItem = new Datamodel[3];
+        drawerItem[0] = new Datamodel(R.drawable.contract, "Subjects");
+        drawerItem[1] = new Datamodel(R.drawable.calendar, "Select Date");
+        drawerItem[2]=new Datamodel(R.drawable.barchart,"Preplanning");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -139,7 +119,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
                         startActivity(I);
                         break;
                     case R.id.action_favorites:
-                        Toast.makeText(UserActivity.this, "Subects", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserActivity.this, "Subjects", Toast.LENGTH_SHORT).show();
                         Intent J=new Intent(UserActivity.this,Stats_1_Activity.class);
                         startActivity(J);
                         break;
@@ -165,7 +145,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
         String name= dataSnapshot.child("Name").getValue().toString();
-        username.setText("Welcome                    " +name);
+        username.setText("Welcome " +name);
             }
 
             @Override
@@ -270,7 +250,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
 
         switch (position) {
             case 0:
-                Intent I = new Intent(UserActivity.this, Subjects.class);
+                Intent I = new Intent(UserActivity.this, Stats_1_Activity.class);
                 startActivity(I);
                 break;
             case 1:
@@ -278,37 +258,14 @@ TextView t1,t2,t3,t4,t5,t6,t7;
                 startActivity(J);
                 break;
             case 2:
-                Intent K = new Intent(UserActivity.this, Stats_1_Activity.class);
+                Intent K = new Intent(UserActivity.this,preplanning_activity.class);
                 startActivity(K);
                 break;
             case 3:
                 Intent L = new Intent(UserActivity.this, S1.class);
                 startActivity(L);
                 break;
-            case 4:
-                Intent M = new Intent(UserActivity.this, S2.class);
-                startActivity(M);
-                break;
-            case 5:
-                Intent N = new Intent(UserActivity.this, S3.class);
-                startActivity(N);
-                break;
-            case 6:
-                Intent O = new Intent(UserActivity.this, S4.class);
-                startActivity(O);
-                break;
-            case 7:
-                Intent P = new Intent(UserActivity.this, S5.class);
-                startActivity(P);
-                break;
-            case 8:
-                Intent Q = new Intent(UserActivity.this, S6.class);
-                startActivity(Q);
-                break;
-            case 9:
-                Intent R = new Intent(UserActivity.this, S7.class);
-                startActivity(R);
-                break;
+
 
             default:
                 break;

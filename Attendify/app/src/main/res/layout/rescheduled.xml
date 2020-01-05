@@ -1,6 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Rescheduled Classes"
+        android:textColor="#F4A950"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext17"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext18"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext19"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext20"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext21"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext22"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <EditText
+        android:id="@+id/edittext23"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:text="ADD SUBJECT"
+        android:textColor="#F4A950" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text=" Save and GO" />
 
 </LinearLayout>
+</ScrollView>

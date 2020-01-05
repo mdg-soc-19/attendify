@@ -64,13 +64,15 @@ public class Subjects extends AppCompatActivity {
                 mDatabase.child("Subject 6").setValue(str6);
                 mDatabase.child("Subject 7").setValue(str7);
 mDatabase.child("a").setValue(a);
-                Intent I = new Intent(Subjects.this, Stats_activity.class);
+                Intent I = new Intent(Subjects.this, UserActivity.class);
                 startActivity(I);
 
 
 
             }
         });
+
+
 
 
 

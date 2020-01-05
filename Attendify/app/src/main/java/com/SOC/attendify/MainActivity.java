@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
     public EditText emailId, passwd;
-    Button btnSignUp;
+    Button btnSignUp,faculty;
     TextView signIn,username;
     String Name;
     FirebaseAuth firebaseAuth;
@@ -87,18 +87,20 @@ public class MainActivity extends AppCompatActivity {
                                 mDatabaseReference.child("Present6").setValue(0);
                                 mDatabaseReference.child("total6").setValue(0);
 
-                                mDatabaseReference.child("Present7d").setValue(0);
+                                mDatabaseReference.child("Present7").setValue(0);
                                 mDatabaseReference.child("total7").setValue(0);
 
-                            mDatabaseReference.child("Subject 1").setValue("Subject1");
-                                mDatabaseReference.child("Subject 2").setValue("Subject2");
-                                mDatabaseReference.child("Subject 3").setValue("Subject3");
-                                mDatabaseReference.child("Subject 4").setValue("Subject4");
-                                mDatabaseReference.child("Subject 5").setValue("Subject5");
-                                mDatabaseReference.child("Subject 6").setValue("Subject6");
-                                mDatabaseReference.child("Subject 7").setValue("Subject7");
+                            mDatabaseReference.child("Subject 1").setValue("");
+                                mDatabaseReference.child("Subject 2").setValue("");
+                                mDatabaseReference.child("Subject 3").setValue("");
+                                mDatabaseReference.child("Subject 4").setValue("");
+                                mDatabaseReference.child("Subject 5").setValue("");
+                                mDatabaseReference.child("Subject 6").setValue("");
+                                mDatabaseReference.child("Subject 7").setValue("");
                                 Name=username.getText().toString();
                                 mDatabaseReference.child("Name").setValue(Name);
+
+
 
                             }
                         }
@@ -115,5 +117,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(I);
             }
         });
+        faculty= (Button) findViewById(R.id.button22);
+        faculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I=new Intent (MainActivity.this,Faculty_login.class);
+            startActivity(I);
+            }
+        });
+
+
     }
 }

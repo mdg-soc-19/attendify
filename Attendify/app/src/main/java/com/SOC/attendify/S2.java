@@ -1,5 +1,6 @@
 package com.SOC.attendify;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import lecho.lib.hellocharts.model.PieChartData;
 import lecho.lib.hellocharts.model.SliceValue;
 import lecho.lib.hellocharts.view.PieChartView;
 
@@ -146,6 +146,8 @@ public class S2 extends AppCompatActivity {
                                             }
                                         }
 
+                                        Intent I=new Intent(S2.this,Stats_1_Activity.class);
+                                        startActivity(I);
 
 
                                     }

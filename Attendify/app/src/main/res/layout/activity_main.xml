@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/attend"
+    android:orientation="vertical"
     tools:context="com.SOC.attendify.MainActivity">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="50dp"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="sans-serif"
         android:text="ATTENDIFY"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#3F5EEE" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        app:srcCompat="@drawable/images" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#F4A950" />
 
     <EditText
         android:id="@+id/username"
@@ -34,8 +31,8 @@
         android:layout_margin="15dp"
         android:hint="Name"
         android:inputType="text"
-        android:textColor="#0C0B0B"
-        android:textColorHint="#0C0B0B" />
+        android:textColor="#161B21"
+        android:textColorHint="#161B21" />
 
     <EditText
         android:id="@+id/ETemail"
@@ -44,8 +41,8 @@
         android:layout_margin="15dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColor="#0C0B0B"
-        android:textColorHint="#0C0B0B" />
+        android:textColor="#161B21"
+        android:textColorHint="#161B21" />
 
     <EditText
         android:id="@+id/ETpassword"
@@ -54,15 +51,15 @@
         android:layout_margin="15dp"
         android:hint="Password"
         android:inputType="numberPassword"
-        android:textColor="#0C0B0B"
-        android:textColorHint="#0C0B0B" />
+        android:textColor="#161B21"
+        android:textColorHint="#161B21" />
 
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_margin="15dp"
-        android:background="@drawable/button_custom"
+        android:background="#F4A950"
         android:text="Sign Up" />
 
     <TextView
@@ -71,6 +68,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="Already have an account? Sign in Here"
-        android:textColor="#090808"
+        android:textColor="#161B21"
         android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4A950"
+        android:text="Faculty login" />
 </LinearLayout>
+</ScrollView>

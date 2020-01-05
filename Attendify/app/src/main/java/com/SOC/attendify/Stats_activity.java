@@ -1,3 +1,4 @@
+
 package com.SOC.attendify;
 
 import java.util.ArrayList;
@@ -65,42 +66,6 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
 
             }
         });
-        S1=(TextView) findViewById(R.id.textView68);
-        S2=(TextView) findViewById(R.id.textView69);
-        S3=(TextView) findViewById(R.id.textView70);
-        S4=(TextView) findViewById(R.id.textView71);
-        S5=(TextView) findViewById(R.id.textView72);
-        S6=(TextView) findViewById(R.id.textView73);
-        S7=(TextView) findViewById(R.id.textView74);
-
-
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                s1=dataSnapshot.child("Subject 1").getValue().toString();
-                s2=dataSnapshot.child("Subject 2").getValue().toString();
-                s3=dataSnapshot.child("Subject 3").getValue().toString();
-                s4=dataSnapshot.child("Subject 4").getValue().toString();
-                s5=dataSnapshot.child("Subject 5").getValue().toString();
-                s6=dataSnapshot.child("Subject 6").getValue().toString();
-                s7=dataSnapshot.child("Subject 7").getValue().toString();
-
-               S1.setText(s1);
-                S2.setText(s2);
-                S3.setText(s3);
-                S4.setText(s4);
-                S5.setText(s5);
-                S6.setText(s6);
-                S7.setText(s7);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
 
 
@@ -125,21 +90,16 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
         spinner.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
-        q1=S1.getText().toString();
-        q2=S2.getText().toString();
-        q3=S3.getText().toString();
-        q4=S4.getText().toString();
-        q5=S5.getText().toString();
-        q6=S6.getText().toString();
-        q7=S7.getText().toString();
+
 
         List<String> categories = new ArrayList<String>();
-        categories.add(q1);
-        categories.add("Business Services");
-        categories.add("Computers");
-        categories.add("Education");
-        categories.add("Personal");
-        categories.add("Travel");
+        categories.add("Subject 1");
+        categories.add("Subject 2");
+        categories.add("Subject 3");
+        categories.add("Subject 4");
+        categories.add("Subject 5");
+        categories.add("Subject 6");
+        categories.add("Subject 7");
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);

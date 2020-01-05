@@ -148,9 +148,14 @@ t3.setText("Absent :" + (b-a));
                                             }
                                         }
 
+                                        Intent I=new Intent(S1.this,Stats_1_Activity.class);
+                                        startActivity(I);
+
+
                                     }
 
                                     }
+
 
         );
 

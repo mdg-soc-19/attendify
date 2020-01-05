@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         android:orientation="vertical">
 
 
@@ -24,7 +25,8 @@
 
             <include
                 android:id="@+id/toolbar"
-                layout="@layout/toolbar" />
+                layout="@layout/toolbar"
+                android:background="@drawable/transparent" />
         </LinearLayout>
 
 
@@ -33,37 +35,58 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/adamina"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="Welcome                                                       user!"
-            android:textColor="#F4A950"
-            android:textSize="40sp" />
+            android:text="Welcome user!"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:visibility="visible" />
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="400dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="50dp"
-            app:srcCompat="@drawable/screenshot" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:text="Click to add subjects"
+            android:textSize="25dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="287dp"
             android:layout_gravity="end|bottom"
+            android:layout_marginTop="350dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="-70dp"
             android:background="#F4A950"
             android:contentDescription="@string/submit"
-            android:src="@drawable/add"
-            app:maxImageSize="50dp" />
+            android:src="@drawable/contract"
+            app:maxImageSize="40dp"
+            tools:maxImageSize="40dp" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="420dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="0dp"
+            android:alpha="1"
+            android:background="#F4A950"
+            android:text="Rescheduled CLasses"
+            android:textColor="#FFFFFF" />
 
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="300dp"
+                android:text="Button" />
 
             <Button
                 android:id="@+id/btnLogOut"
@@ -85,11 +108,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="70dp"
                 android:layout_marginBottom="0dp"
-                app:itemBackground="@color/colorPrimary"
-                app:itemIconTint="@android:color/white"
-                app:itemTextColor="@android:color/white"
+                android:background="#F4A950"
+                app:itemIconTint="#FFFFFF"
+                app:itemTextColor="#FFFFFF"
                 app:menu="@menu/bottom_nav_menu" />
-
 
 
         </FrameLayout>
@@ -161,8 +183,6 @@
         android:choiceMode="singleChoice"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
-
-
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

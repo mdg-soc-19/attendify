@@ -3,11 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif"
+        android:text="FACULTY LOGIN"
+        android:textColor="#0C0B0B"
+        android:textSize="30dp" />
+
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/loginEmail2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -17,7 +27,7 @@
         android:textColorHint="#0C0B0B" />
 
     <EditText
-        android:id="@+id/loginpaswd"
+        android:id="@+id/loginpaswd2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -27,8 +37,8 @@
         android:textColorHint="#0C0B0B" />
 
     <Button
-        android:id="@+id/btnLogIn"
-        android:layout_width="200dp"
+        android:id="@+id/btnLogIn2"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="15dp"
         android:background="#F4A950"
@@ -36,7 +46,7 @@
         android:textSize="25dp" />
 
     <TextView
-        android:id="@+id/TVSignIn"
+        android:id="@+id/TVSignIn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -45,7 +55,7 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/TVforgot"
+        android:id="@+id/TVforgot2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"

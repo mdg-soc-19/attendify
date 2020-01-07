@@ -1,32 +1,23 @@
 package com.SOC.attendify;
-import android.content.Intent;;
+
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
-
-import android.os.Bundle;
-
-import androidx.annotation.RequiresApi;
-
-
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.drawerlayout.widget.DrawerLayout.DrawerListener;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -39,6 +30,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+;
 public class UserActivity extends AppCompatActivity {
     Button btnLogOut,stats,preplanning,notification,aboutus,reschedule,fab,resch;
     FirebaseAuth firebaseAuth;
@@ -141,6 +134,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child(currentuser);
 
         username=(TextView) findViewById(R.id.Welcome);
+
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -321,6 +315,30 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         //This is necessary to change the icon of the Drawer Toggle upon state change.
         mDrawerToggle.syncState();
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            onBackPressed();
+        }
+
+        return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent I=new Intent(UserActivity.this,UserActivity.class);
+        startActivity(I);
+        //this is only needed if you have specific things
+        //that you want to do when the user presses the back button.
+        /* your specific things...*/
+        super.onBackPressed();
+    }
+
+
+
+
+
 }
 
 

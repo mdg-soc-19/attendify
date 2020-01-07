@@ -1,20 +1,18 @@
 
 package com.SOC.attendify;
 
-import java.util.ArrayList;
-import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 import androidx.annotation.NonNull;
 
@@ -25,15 +23,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Stats_activity extends Activity implements OnItemSelectedListener{
+import java.util.ArrayList;
+import java.util.List;
 
-    int a;
+public class Stats_activity<mDatabase> extends Activity implements OnItemSelectedListener{
+
+    public int a;
     DatePicker picker;
     Button displayDate,go;
     TextView textview1,S1,S2,S3,S4,S5,S6,S7;
     String s1,s2,s3,s4,s5,s6,s7,q1,q2,q3,q4,q5,q6,q7;
-DatabaseReference mDatabase;
-String currentuser= FirebaseAuth.getInstance().getCurrentUser().getUid();
+    public DatabaseReference mDatabase;
+    String currentuser= FirebaseAuth.getInstance().getCurrentUser().getUid();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,9 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
             public void onClick(View view) {
 
                 textview1.setText("Change Date: "+getCurrentDate());
+
+
+
             }
 
         });
@@ -60,13 +65,47 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent I = new Intent(Stats_activity.this, Stats_1_Activity.class);
-                startActivity(I);
+
+if (a==0)
+{Intent J = new Intent(Stats_activity.this, S1.class);
+    startActivity(J);
+}
 
 
-            }
-        });
+                if (a==1)
+                {Intent K= new Intent(Stats_activity.this, S2.class);
+                    startActivity(K);
+                }
 
+                if (a==2)
+                {Intent J = new Intent(Stats_activity.this, S3.class);
+                    startActivity(J);
+                }
+
+                if (a==3)
+                {Intent J = new Intent(Stats_activity.this, S4.class);
+                    startActivity(J);
+                }
+
+                if (a==4)
+                {Intent J = new Intent(Stats_activity.this, S5.class);
+                    startActivity(J);
+                }
+
+                if (a==5)
+                {Intent J = new Intent(Stats_activity.this, S6.class);
+                    startActivity(J);
+                }
+
+                if (a==6)
+                {Intent J = new Intent(Stats_activity.this, S7.class);
+                    startActivity(J);
+                }
+                int d=  (picker.getMonth()+1);
+                int b=picker.getDayOfMonth();
+                int c=picker.getYear();
+                mDatabase.child(d+"/"+b+"/"+c+a ).setValue(d+"/"+b+"/"+c);
+        }});
 
 
 
@@ -109,6 +148,29 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
+
+
+    mDatabase.addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+           s1= dataSnapshot.child("Subject 1").getValue().toString();
+            s2= dataSnapshot.child("Subject 2").getValue().toString();
+            s3= dataSnapshot.child("Subject 3").getValue().toString();
+            s4= dataSnapshot.child("Subject 4").getValue().toString();
+            s5= dataSnapshot.child("Subject 5").getValue().toString();
+            s6= dataSnapshot.child("Subject 6").getValue().toString();
+            s7= dataSnapshot.child("Subject 7").getValue().toString();
+
+
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    });
+
+
     }
 
     @Override
@@ -116,13 +178,39 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
         // On selecting a spinner item
         String item = parent.getItemAtPosition(position).toString();
 
-        // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
-    }
-    public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
+        switch (position)
+        { case 0:
+        {Toast.makeText(parent.getContext(), "Selected: " + s1, Toast.LENGTH_LONG).show();
+        break;}
+
+            case 1:
+        {Toast.makeText(parent.getContext(), "Selected: " + s2, Toast.LENGTH_LONG).show();
+            break;}
+
+            case 2:
+        {Toast.makeText(parent.getContext(), "Selected: " + s3, Toast.LENGTH_LONG).show();
+            break;}
+
+            case 3:
+        {Toast.makeText(parent.getContext(), "Selected: " + s4, Toast.LENGTH_LONG).show();
+            break;}
+
+            case 4:
+        {Toast.makeText(parent.getContext(), "Selected: " + s5, Toast.LENGTH_LONG).show();
+            break;}
+
+            case 5:
+        {Toast.makeText(parent.getContext(), "Selected: " + s6, Toast.LENGTH_LONG).show();
+            break;}
+
+            case 6:
+        {Toast.makeText(parent.getContext(), "Selected: " + s7, Toast.LENGTH_LONG).show();
+            break;}
     }
 
+
+     a=position;
+    }
     public String getCurrentDate(){
         StringBuilder builder=new StringBuilder();;
         builder.append((picker.getMonth() + 1)+"/");//month is 0 based
@@ -131,5 +219,12 @@ mDatabase= FirebaseDatabase.getInstance().getReference().child(currentuser);
 
         return builder.toString();
     }
+
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
+    }
+
+
+
 
 }

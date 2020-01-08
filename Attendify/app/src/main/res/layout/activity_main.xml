@@ -18,11 +18,11 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="52dp"
         android:layout_marginBottom="50dp"
         android:fontFamily="sans-serif"
         android:text="ATTENDIFY"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#F4A950" />
 
     <EditText
@@ -84,5 +84,13 @@
         android:background="#F4A950"
         android:text="Faculty login" />
 
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#F4A950"
+        android:visibility="invisible" />
 </LinearLayout>
 </ScrollView>

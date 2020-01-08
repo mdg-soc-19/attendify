@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif"
-            android:hint="You have not added any  subjects in the home page"
+            android:hint="NO SUBJECTS ADDED "
             android:textColor="#000000"
             android:textSize="30dp"
             tools:textColorHint="#383131" />

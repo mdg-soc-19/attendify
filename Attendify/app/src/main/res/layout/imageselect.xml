@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="40dp"
-        tools:srcCompat="@drawable/user" />
 
-    <TextView
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        tools:srcCompat="@drawable/usericon" />
+
+        <TextView
         android:id="@+id/textView71"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="165dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20dp" />
@@ -27,11 +36,20 @@
         android:id="@+id/textView72"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="165dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ABOUT THE USER"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
     <EditText
         android:id="@+id/edittext26"
@@ -39,7 +57,8 @@
         android:layout_height="50dp"
         android:layout_alignLeft="@+id/button"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#F4A950"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="About yourself"
@@ -51,9 +70,16 @@
         android:id="@+id/button28"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="#F4A950"
         android:text="set"
         android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
 
     <Button
         android:id="@+id/button25"
@@ -73,10 +99,5 @@
         android:text="save"
         android:textColor="#FFFFFF" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

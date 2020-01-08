@@ -1,30 +1,26 @@
 package com.SOC.attendify;
 import android.content.Intent;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class ActivityLogin extends AppCompatActivity {
     public EditText loginEmailId, logInpasswd;
     Button btnLogIn;
     TextView signup,forgot;
+    ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
@@ -57,6 +53,7 @@ public class ActivityLogin extends AppCompatActivity {
             public void onClick(View view) {
                 Intent I = new Intent(ActivityLogin.this, MainActivity.class);
                 startActivity(I);
+
             }
         });
 
@@ -67,6 +64,9 @@ forgot.setOnClickListener(new View.OnClickListener() {
     startActivity(I);
     }
 });
+
+progressBar=(ProgressBar) findViewById(R.id.progressBar);
+
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,6 +94,8 @@ forgot.setOnClickListener(new View.OnClickListener() {
                 } else {
                     Toast.makeText(ActivityLogin.this, "Error", Toast.LENGTH_SHORT).show();
                 }
+
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
 

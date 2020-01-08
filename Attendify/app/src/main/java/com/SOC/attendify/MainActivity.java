@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSignUp,faculty;
     TextView signIn,username;
     String Name;
+    ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
     private DatabaseReference mDatabaseReference;
     @Override
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         emailId = findViewById(R.id.ETemail);
         passwd = findViewById(R.id.ETpassword);
         btnSignUp = findViewById(R.id.btnSignUp);
+        progressBar=(ProgressBar) findViewById(R.id.simpleProgressBar);
         signIn = findViewById(R.id.TVSignIn);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,10 +96,11 @@ public class MainActivity extends AppCompatActivity {
                                 mDatabaseReference.child("Subject 5").setValue("");
                                 mDatabaseReference.child("Subject 6").setValue("");
                                 mDatabaseReference.child("Subject 7").setValue("");
+                                mDatabaseReference.child("status").setValue("");
                                 Name=username.getText().toString();
                                 mDatabaseReference.child("Name").setValue(Name);
 
-
+progressBar.setVisibility(View.VISIBLE);
 
                             }
                         }

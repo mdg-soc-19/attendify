@@ -1,5 +1,6 @@
 package com.SOC.attendify;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -116,8 +117,8 @@ mDatabase.addValueEventListener(new ValueEventListener() {
 
                 if (((b-a+c)/d)>0.25)
                 {
-                    stat.setText("You can,t miss theses all classes ");
-
+                    stat.setText("You can't miss theses all classes ");
+stat.setTextColor(Color.RED);
 
                 }
 
@@ -131,7 +132,7 @@ else if (((b-a+c)/d)<=0.25)
 
                     }
                     stat.setText("You are only allowed to miss "+(count) + " other classes fot >=75% attendance" );
-
+                    stat.setTextColor(Color.GREEN);
                 }
 
 
@@ -175,7 +176,10 @@ else if (((b-a+c)/d)<=0.25)
 
                 a=Integer.parseInt(p2);
                 b=Integer.parseInt(T2);
-
+tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
 
             break;}
 
@@ -184,7 +188,10 @@ else if (((b-a+c)/d)<=0.25)
 
                 a=Integer.parseInt(p3);
                 b=Integer.parseInt(T3);
-
+                tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
 
                 break;}
 
@@ -193,7 +200,10 @@ else if (((b-a+c)/d)<=0.25)
 
                 a=Integer.parseInt(p4);
                 b=Integer.parseInt(T4);
-
+                tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
                 break;}
 
             case 4:
@@ -201,7 +211,10 @@ else if (((b-a+c)/d)<=0.25)
 
                 a=Integer.parseInt(p5);
                 b=Integer.parseInt(T5);
-
+                tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
                 break;}
 
             case 5:
@@ -209,14 +222,20 @@ else if (((b-a+c)/d)<=0.25)
 
                 a=Integer.parseInt(p6);
                 b=Integer.parseInt(T6);
-
+                tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
                 break;}
 
             case 6:
             {Toast.makeText(parent.getContext(), "Selected: " + s7, Toast.LENGTH_LONG).show();
                 a=Integer.parseInt(p7);
                 b=Integer.parseInt(T7);
-
+                tot.setVisibility(View.VISIBLE);
+                mis.setVisibility(View.VISIBLE);
+                go.setVisibility(View.VISIBLE);
+                stat.setVisibility(View.VISIBLE);
 
                 break;}
         }

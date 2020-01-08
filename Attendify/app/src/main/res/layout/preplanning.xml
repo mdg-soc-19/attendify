@@ -14,6 +14,7 @@
         android:layout_marginLeft="95dp"
         android:layout_marginTop="30dp"
         android:text="Select Subject"
+        android:textColor="#000000"
         android:textSize="30dp" />
 
     <Spinner
@@ -59,7 +60,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="GO" />
+        android:background="#F4A950"
+        android:text="GO"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView69"
@@ -67,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="TextView"
+        android:textColor="#000000"
         android:textSize="25dp" />
 
 

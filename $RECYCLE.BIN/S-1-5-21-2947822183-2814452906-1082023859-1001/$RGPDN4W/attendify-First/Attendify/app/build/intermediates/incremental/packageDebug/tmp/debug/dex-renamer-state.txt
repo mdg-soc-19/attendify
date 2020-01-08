@@ -1,0 +1,4 @@
+#Tue Dec 31 22:36:24 IST 2019
+base.0=D\:\\attendify-First\\attendify-First\\Attendify\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,15 +1,11 @@
 package com.SOC.attendify;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
-
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,6 +59,7 @@ public class Subjects extends AppCompatActivity {
                 mDatabase.child("Subject 5").setValue(str5);
                 mDatabase.child("Subject 6").setValue(str6);
                 mDatabase.child("Subject 7").setValue(str7);
+                mDatabase.child("status").setValue("");
 mDatabase.child("a").setValue(a);
                 Intent I = new Intent(Subjects.this, UserActivity.class);
                 startActivity(I);

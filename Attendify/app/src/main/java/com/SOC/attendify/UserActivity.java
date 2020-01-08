@@ -67,7 +67,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         resch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent I=new Intent (UserActivity.this,Rescheduledstudent.class);
+                Intent I=new Intent (UserActivity.this,Imageselector.class);
                 startActivity(I);
             }
         });
@@ -84,10 +84,11 @@ TextView t1,t2,t3,t4,t5,t6,t7;
 
 
         setupToolbar();
-        Datamodel[] drawerItem = new Datamodel[3];
-        drawerItem[0] = new Datamodel(R.drawable.contract, "Subjects");
-        drawerItem[1] = new Datamodel(R.drawable.calendar, "Select Date");
-        drawerItem[2]=new Datamodel(R.drawable.barchart,"Preplanning");
+        Datamodel[] drawerItem = new Datamodel[4];
+        drawerItem[0]=new Datamodel(R.drawable.user,"Profile");
+        drawerItem[1] = new Datamodel(R.drawable.contract, "Subjects");
+        drawerItem[2] = new Datamodel(R.drawable.calendar, "Select Date");
+        drawerItem[3]=new Datamodel(R.drawable.barchart,"Preplanning");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -243,23 +244,25 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         Fragment fragment = null;
 
         switch (position) {
-            case 0:
+            case 1:
                 Intent I = new Intent(UserActivity.this, Stats_1_Activity.class);
                 startActivity(I);
                 break;
-            case 1:
+            case 2:
                 Intent J = new Intent(UserActivity.this, Stats_activity.class);
                 startActivity(J);
                 break;
-            case 2:
+            case 3:
                 Intent K = new Intent(UserActivity.this,preplanning_activity.class);
                 startActivity(K);
                 break;
-            case 3:
+            case 4:
                 Intent L = new Intent(UserActivity.this, S1.class);
                 startActivity(L);
                 break;
-
+            case 0:
+                Intent M = new Intent(UserActivity.this, Imageselector.class);
+                startActivity(M);
 
             default:
                 break;

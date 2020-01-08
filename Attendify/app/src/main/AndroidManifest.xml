@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.SOC.attendify">
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -36,6 +36,7 @@
         <activity android:name=".S7"></activity>
 <activity android:name=".Faculty_login"></activity>
         <activity android:name=".Rescheduledstudent"></activity>
+        <activity android:name=".Imageselector"></activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -19,7 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 public class Faculty_login extends AppCompatActivity {
         public EditText loginEmailId, logInpasswd;
         Button btnLogIn;
-        TextView signup,forgot;
+        TextView signup,forgot,passcode,passcodeconf;
+        String Passcode,Passcodeconf;
+        final int code=19115114;
+
         FirebaseAuth firebaseAuth;
         private FirebaseAuth.AuthStateListener authStateListener;
 
@@ -34,6 +37,9 @@ public class Faculty_login extends AppCompatActivity {
             btnLogIn = findViewById(R.id.btnLogIn2);
             signup = findViewById(R.id.TVSignIn2);
             forgot=findViewById(R.id.TVforgot2);
+
+
+
             authStateListener = new FirebaseAuth.AuthStateListener() {
                 @Override
                 public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -62,35 +68,49 @@ public class Faculty_login extends AppCompatActivity {
                     startActivity(I);
                 }
             });
+
             btnLogIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String userEmail = loginEmailId.getText().toString();
                     String userPaswd = logInpasswd.getText().toString();
-                    if (userEmail.isEmpty()) {
-                        loginEmailId.setError("Provide your Email first!");
-                        loginEmailId.requestFocus();
-                    } else if (userPaswd.isEmpty()) {
-                        logInpasswd.setError("Enter Password!");
-                        logInpasswd.requestFocus();
-                    } else if (userEmail.isEmpty() && userPaswd.isEmpty()) {
-                        Toast.makeText(Faculty_login.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
-                    } else if (!(userEmail.isEmpty() && userPaswd.isEmpty())) {
-                        firebaseAuth.signInWithEmailAndPassword(userEmail, userPaswd).addOnCompleteListener(Faculty_login.this, new OnCompleteListener() {
-                            @Override
-                            public void onComplete(@NonNull Task task) {
-                                if (!task.isSuccessful()) {
-                                    Toast.makeText(Faculty_login.this, "Not sucessfull", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    startActivity(new Intent(Faculty_login.this, Rescheduled_activity.class));
+
+
+
+                        if (userEmail.isEmpty()) {
+                            loginEmailId.setError("Provide your Email first!");
+                            loginEmailId.requestFocus();
+                        } else if (userPaswd.isEmpty()) {
+                            logInpasswd.setError("Enter Password!");
+                            logInpasswd.requestFocus();
+                        } else if (userEmail.isEmpty() && userPaswd.isEmpty()) {
+                            Toast.makeText(Faculty_login.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
+                        } else if (!(userEmail.isEmpty() && userPaswd.isEmpty())) {
+
+
+                            firebaseAuth.signInWithEmailAndPassword(userEmail, userPaswd).addOnCompleteListener(Faculty_login.this, new OnCompleteListener() {
+                                @Override
+                                public void onComplete(@NonNull Task task) {
+
+
+                                    if (!task.isSuccessful()) {
+                                        Toast.makeText(Faculty_login.this, "Not sucessfull", Toast.LENGTH_SHORT).show();
+                                    } else {
+
+
+                                        startActivity(new Intent(Faculty_login.this, Verify.class));
+
+
+                                    }
                                 }
-                            }
-                        });
-                    } else {
-                        Toast.makeText(Faculty_login.this, "Error", Toast.LENGTH_SHORT).show();
+                            });
+                        } else {
+                            Toast.makeText(Faculty_login.this, "Error", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-            });
+
+
+                });
 
 
 

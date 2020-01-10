@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 ;
+
 public class UserActivity extends AppCompatActivity {
     Button btnLogOut,stats,preplanning,notification,aboutus,reschedule,fab,resch;
     FirebaseAuth firebaseAuth;
@@ -67,7 +67,7 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         resch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent I=new Intent (UserActivity.this,Imageselector.class);
+                Intent I=new Intent (UserActivity.this,Rescheduledstudent.class);
                 startActivity(I);
             }
         });
@@ -84,12 +84,12 @@ TextView t1,t2,t3,t4,t5,t6,t7;
 
 
         setupToolbar();
-        Datamodel[] drawerItem = new Datamodel[4];
+        Datamodel[] drawerItem = new Datamodel[5];
         drawerItem[0]=new Datamodel(R.drawable.user,"Profile");
         drawerItem[1] = new Datamodel(R.drawable.contract, "Subjects");
         drawerItem[2] = new Datamodel(R.drawable.calendar, "Select Date");
         drawerItem[3]=new Datamodel(R.drawable.barchart,"Preplanning");
-
+drawerItem[4]=new Datamodel(R.drawable.user,"Logout");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -257,8 +257,9 @@ TextView t1,t2,t3,t4,t5,t6,t7;
                 startActivity(K);
                 break;
             case 4:
-                Intent L = new Intent(UserActivity.this, S1.class);
-                startActivity(L);
+                FirebaseAuth.getInstance().signOut();
+                Intent z = new Intent(UserActivity.this, ActivityLogin.class);
+                startActivity(z);
                 break;
             case 0:
                 Intent M = new Intent(UserActivity.this, Imageselector.class);
@@ -319,30 +320,34 @@ TextView t1,t2,t3,t4,t5,t6,t7;
         mDrawerToggle.syncState();
     }
 
+
+    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+    private long mBackPressed;
+
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-            onBackPressed();
+    public void onBackPressed()
+    {
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
+        {
+            Intent a = new Intent(Intent.ACTION_MAIN);
+            a.addCategory(Intent.CATEGORY_HOME);
+            a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(a);
         }
+        else { Toast.makeText(getBaseContext(), "Tap back button in order to exit", Toast.LENGTH_SHORT).show(); }
 
-        return false;
+        mBackPressed = System.currentTimeMillis();
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent I=new Intent(UserActivity.this,UserActivity.class);
-        startActivity(I);
-        //this is only needed if you have specific things
-        //that you want to do when the user presses the back button.
-        /* your specific things...*/
-        super.onBackPressed();
-    }
-
-
 
 
 
 }
+
+
+
+
+
+
 
 
 

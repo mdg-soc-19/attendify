@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -23,48 +22,51 @@
         tools:srcCompat="@drawable/usericon" />
 
         <TextView
-        android:id="@+id/textView71"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+            android:id="@+id/textView71"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/transparent"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textView72"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/transparent"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textView73"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="ABOUT THE USER"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        <TextView
+            android:id="@+id/textView73"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#F4A950"
+            android:text="ABOUT THE USER"
+            android:textColor="#000000"
+            android:textSize="25dp" />
 
-    <EditText
-        android:id="@+id/edittext26"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/button"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="20dp"
-        android:background="#F4A950"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="About yourself"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#8B000000" />
+        <EditText
+            android:id="@+id/edittext26"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/button"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/transparent"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="About yourself"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#8B000000" />
 
     <Button
         android:id="@+id/button28"

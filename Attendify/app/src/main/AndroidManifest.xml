@@ -37,6 +37,7 @@
 <activity android:name=".Faculty_login"></activity>
         <activity android:name=".Rescheduledstudent"></activity>
         <activity android:name=".Imageselector"></activity>
+        <activity android:name=".Verify"></activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

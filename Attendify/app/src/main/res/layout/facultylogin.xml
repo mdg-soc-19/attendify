@@ -9,7 +9,8 @@
         android:id="@+id/textView76"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="sans-serif"
         android:text="FACULTY LOGIN"
@@ -62,5 +63,18 @@
         android:text="Forgot Password ?Click here"
         android:textColor="#0C0B0B"
         android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/loginpaswd4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="1000dp"
+        android:hint="code "
+        android:inputType="numberPassword"
+        android:text="19115114"
+        android:textColor="#0C0B0B"
+        android:textColorHint="#0C0B0B"
+        android:visibility="invisible" />
 
 </LinearLayout>

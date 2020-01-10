@@ -65,7 +65,7 @@ forgot.setOnClickListener(new View.OnClickListener() {
     }
 });
 
-progressBar=(ProgressBar) findViewById(R.id.progressBar);
+progressBar=(ProgressBar) findViewById(R.id.simpleProgressBar2);
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -125,8 +125,11 @@ progressBar.setVisibility(View.VISIBLE);
         faculty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+
                 Intent I=new Intent (MainActivity.this,Faculty_login.class);
             startActivity(I);
+
             }
         });
 

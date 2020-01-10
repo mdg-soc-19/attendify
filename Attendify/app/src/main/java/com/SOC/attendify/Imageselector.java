@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
@@ -37,7 +40,7 @@ public class Imageselector extends AppCompatActivity {
     // view for image view
     private ImageView imageView;
     private DatabaseReference mDatabase;
-
+private FirebaseStorage mStorage;
     // Uri indicates, where the image will be picked from
     private Uri filePath;
 
@@ -47,14 +50,14 @@ public class Imageselector extends AppCompatActivity {
     String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     // instance for firebase storage and StorageReference
-    FirebaseStorage storage;
+
     StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.imageselect);
-
+mStorage=FirebaseStorage.getInstance();
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         ColorDrawable colorDrawable
@@ -71,8 +74,7 @@ public class Imageselector extends AppCompatActivity {
         imageView = findViewById(R.id.imageView2);
         mDatabase = FirebaseDatabase.getInstance().getReference().child(currentuser);
         // get the Firebase  storage reference
-        storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReference();
+        storageReference = FirebaseStorage.getInstance().getReference();
 
         // on pressing btnSelect SelectImage() is called
         btnSelect.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +88,24 @@ public class Imageselector extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
-                                             uploadImage(Uri.EMPTY);
+
+                                            StorageReference profile=storageReference.child("Images");
+                                         profile.putFile(filePath)
+                                                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                     @Override
+                                                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                                         Uri downloadUrl=taskSnapshot.getUploadSessionUri();
+
+                                                     }
+                                                 })
+                                                 .addOnFailureListener(new OnFailureListener() {
+                                                     @Override
+                                                     public void onFailure(@NonNull Exception e) {
+
+                                                     }
+                                                 });
+
+
                                          }
                                      }
         );
@@ -98,7 +117,7 @@ public class Imageselector extends AppCompatActivity {
                 name = dataSnapshot.child("Name").getValue().toString();
                 t1.setText(name);
                 String s = dataSnapshot.child("status").getValue().toString();
-                t3.setText(s);
+                t3.setText("Name:"+s);
 
             }
 
